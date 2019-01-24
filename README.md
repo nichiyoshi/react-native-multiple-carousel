@@ -1,6 +1,8 @@
 # react-native-multiple-carousel
 Sample react-native app of carousel which allows multiple items at one slide.
 
+Since [**react-native-snap-carousel** may not be supporting  multiple items at one slide](https://github.com/archriss/react-native-snap-carousel/issues/102), I made similer function by myself.
+
 Pressing each item is supported.
 
 Jumping items by pressing arrows is also suppoted.
