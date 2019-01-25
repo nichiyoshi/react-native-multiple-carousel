@@ -4,16 +4,7 @@
  */
 
 import React, {Component} from "react"
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  FlatList,
-  Button,
-  ScrollView,
-  TouchableOpacity
-} from "react-native"
+import {StyleSheet, Text, View, FlatList, TouchableOpacity} from "react-native"
 
 import Item from "./item"
 
@@ -78,7 +69,6 @@ export default class App extends Component {
   }
 
   shiftToRight = () => {
-    this.shiftDirection = "right"
     const maxIndex = this.getMaxBeginIndex()
     const currentIndex = this.currentIndex
     const nextIndex = currentIndex < maxIndex ? currentIndex + 1 : maxIndex
@@ -87,7 +77,6 @@ export default class App extends Component {
   }
 
   shiftToLeft = () => {
-    this.shiftDirection = "left"
     const currentIndex = this.currentIndex
     const nextIndex = currentIndex > 0 ? currentIndex - 1 : 0
     this.flatlist.scrollToIndex({index: nextIndex})
@@ -95,7 +84,6 @@ export default class App extends Component {
   }
 
   skipToRight = () => {
-    this.shiftDirection = "right"
     const maxIndex = this.getMaxBeginIndex()
     const currentIndex = this.currentIndex
     const distination = currentIndex + NUM_OF_ROW_ITEM
@@ -105,7 +93,6 @@ export default class App extends Component {
   }
 
   skipToLeft = () => {
-    this.shiftDirection = "left"
     const currentIndex = this.currentIndex
     const distination = currentIndex - NUM_OF_ROW_ITEM
     const nextIndex = distination < 0 ? 0 : distination
